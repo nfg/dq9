@@ -1,6 +1,11 @@
 <?php
 
-$days = ceil((strtotime("2010-07-11")-time())/24/60/60);
+$msg = 'Rejoice, for it has been released unto us!';
+$days = ceil((strtotime("2010-07-11") - time())/24/60/60);
+if ($days > 0)
+{
+    $msg = "<big>$days</big> days 'til the North American release.";
+}
 
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -10,7 +15,7 @@ $days = ceil((strtotime("2010-07-11")-time())/24/60/60);
 
 <div style="text-align: center">
     <img src="dq9.png" alt="Dragon Quest IX: Sentinels of the Starry Skies" />
-    <h2><big><?php echo $days ?></big> days 'til the North American release.</h2>
+    <h2><?php echo $msg ?></h2>
 </div>
 
 </body>
